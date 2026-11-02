@@ -2,6 +2,7 @@
 $VMName  = "CLOUD01"
 $VMPath  = "E:\MACHINES-goc243\$VMName"
 $VHDPath = "$VMPath\$VMName.vhdx"
+$ISOPath = "E:\Temp\26300.9457.260913-1737.26h2_ge_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso"
 $Switch  = "External"
 
 # Vytvoření adresáře
@@ -53,7 +54,18 @@ Enable-VMTPM `
 Set-VMProcessor `
     -VMName $VMName `
     -ExposeVirtualizationExtensions $true
+
+# Připojení ISO
+Add-VMDvdDrive `
+    -VMName $VMName `
+    -Path $ISOPath
+
+# Nastavení bootu z DVD
+$DVD = Get-VMDvdDrive -VMName $VMName
+
+Set-VMFirmware `
+    -VMName $VMName `
+    -FirstBootDevice $DVD
     
 # Kontrola
 Get-VM $VMName
-Get-VMTPM $VMName
