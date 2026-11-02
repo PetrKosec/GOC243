@@ -66,6 +66,13 @@ $DVD = Get-VMDvdDrive -VMName $VMName
 Set-VMFirmware `
     -VMName $VMName `
     -FirstBootDevice $DVD
+
+# Vygenerovat MAC a nastavit ji jako statickou
+$MacAddress = (Get-VMNetworkAdapter -VMName $VMName).MacAddress
+
+Set-VMNetworkAdapter `
+    -VMName $VMName `
+    -StaticMacAddress $MacAddress
     
 # Kontrola
 Get-VM $VMName
