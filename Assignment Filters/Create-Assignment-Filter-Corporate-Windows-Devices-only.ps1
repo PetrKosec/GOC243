@@ -2,7 +2,7 @@ Connect-MgGraph -Scopes "DeviceManagementConfiguration.ReadWrite.All"
 
 $body = @{
     "@odata.type" = "#microsoft.graph.deviceAndAppManagementAssignmentFilter"
-    displayName   = "Windows - Corporate (PowerShell)"
+    displayName   = "GOC243 - Windows - Corporate (PowerShell)"
     description   = "Corporate Windows devices only"
     platform      = "windows10AndLater"
     rule          = '(device.deviceOwnership -eq "Corporate")'
