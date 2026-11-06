@@ -5,11 +5,15 @@ $folders = @(
     "E:\SOURCES",
     "E:\SOURCES\APPs",
     "E:\SOURCES\Scripts",
-    "E:\SOURCES\ISO",
+    "E:\SOURCES\ISO-OS",
+    "E:\SOURCES\ISO-PE",
+    "E:\SOURCES\Drivers",
     "E:\SOURCES\APPs\Microsoft",
     "E:\SOURCES\APPs\7-ZIP",
-    "E:\SOURCES\APPs\7-ZIP\26.01",
-    "E:\SOURCES\APPs\7-ZIP\25.01"
+    "E:\SOURCES\APPs\7-ZIP\26.05",
+    "E:\SOURCES\APPs\7-ZIP\26.05\x64",
+    "E:\SOURCES\APPs\7-ZIP\26.05\x86",
+    "E:\SOURCES\APPs\7-ZIP\23.01"
 )
 
 foreach ($folder in $folders) {
