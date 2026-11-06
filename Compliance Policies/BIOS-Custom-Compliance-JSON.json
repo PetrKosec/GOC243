@@ -1,0 +1,18 @@
+{
+  "Rules": [
+    {
+      "SettingName": "BIOSVersion",
+      "Operator": "IsEquals",
+      "DataType": "String",
+      "Operand": "1.25.0",
+      "MoreInfoUrl": "https://contoso.com/compliance/bios",
+      "RemediationStrings": [
+        {
+          "Language": "en_US",
+          "Title": "BIOS version is not compliant",
+          "Description": "Update BIOS to version 1.25.0 or later."
+        }
+      ]
+    }
+  ]
+}
