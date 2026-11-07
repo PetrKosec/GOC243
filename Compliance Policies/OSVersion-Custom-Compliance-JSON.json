@@ -1,0 +1,14 @@
+{
+"SettingName":"osVer",
+"Operator":"GreaterThan",
+"DataType":"Version",
+"Operand":"10.0.19042",
+"MoreInfoUrl":"https://www.gopas.cz/WorkstationsCompliance",
+"RemediationStrings":[
+{
+"Language":"en_US",
+"Title":"Too old version of your operating system",
+"Description": "You must update your OS to at least 10.0.19043 (21H1)"
+}
+]
+}
